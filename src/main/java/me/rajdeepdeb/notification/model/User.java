@@ -29,4 +29,13 @@ public class User {
     public void setUuid(String uuid) {
         this.uuid = uuid;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", uuid='" + uuid + '\'' +
+                '}';
+    }
 }

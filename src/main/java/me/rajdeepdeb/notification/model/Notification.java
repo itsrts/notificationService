@@ -39,6 +39,8 @@ public class Notification {
     public String toString() {
         return "Notification{" +
                 "message='" + message + '\'' +
+                ", user=" + user.toString() +
+                ", type=" + type +
                 '}';
     }
 }
