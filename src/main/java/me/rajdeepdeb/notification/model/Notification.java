@@ -1,5 +1,6 @@
 package me.rajdeepdeb.notification.model;
 
+import me.rajdeepdeb.notification.objects.NotificationStatusEnum;
 import me.rajdeepdeb.notification.objects.NotificationTypeEnum;
 
 public class Notification {
@@ -7,8 +8,18 @@ public class Notification {
     private String message;
     private User user;
     private NotificationTypeEnum type;
+    private NotificationStatusEnum status;
 
     public Notification() {
+        this.status = NotificationStatusEnum.PENDING;
+    }
+
+    public NotificationStatusEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(NotificationStatusEnum status) {
+        this.status = status;
     }
 
     public String getMessage() {

@@ -1,11 +1,11 @@
 package me.rajdeepdeb.notification.objects;
 
-public enum NotificationTypeEnum {
-    EMAIL("EMAIL"), SMS("SMS"), PUSH("PUSH");
+public enum NotificationStatusEnum {
+    PENDING("PENDING"), SUCCESS("SUCCESS"), FAILED("FAILED");
 
     private String type;
 
-    NotificationTypeEnum(String type) {
+    NotificationStatusEnum(String type) {
         this.type = type;
     }
 
