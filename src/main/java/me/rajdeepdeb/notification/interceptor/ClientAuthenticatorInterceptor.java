@@ -21,7 +21,7 @@ public class ClientAuthenticatorInterceptor implements HandlerInterceptor {
         String token = request.getHeader(RequestHeaderConstants.HEADER_AUTH);
         System.out.println(token);
         Client client = subscriptionService.getClientForToken(token);
-        if (client == null) {
+        if (client == null || client.getSubscription().isExpired()) {
             response.setStatus(401);
             return false;
         }

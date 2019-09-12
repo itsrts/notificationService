@@ -20,7 +20,7 @@ public class NotificationServiceImpl implements INotificationService {
     // taking map as an in-memory data store, in actual it can be rabbitmq
     private HashMap<NotificationTypeEnum, ArrayBlockingQueue<Notification>> queue = new HashMap<>();
 
-    // taking map as an in-memory data store, in actual it can be rabbitmq
+    // taking map as an in-memory data store, in actual it can be in sql / redis
     private HashMap<String, Notification> statusMap = new HashMap<>();
 
     // taking in-memory data structure for counting, in actual it can be in mysql with transactions / redis
